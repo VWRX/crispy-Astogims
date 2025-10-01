@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Clicker - Telegram Mini App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header with score and energy -->
+        <div class="header">
+            <div class="score-container">
+                <div class="stars-icon">⭐</div>
+                <div class="score-text">
+                    <div class="current-score" id="currentScore">0</div>
+                    <div class="total-stars">Stars</div>
+                </div>
+            </div>
+            <div class="energy-container">
+                <div class="energy-icon">⚡</div>
+                <div class="energy-text">
+                    <div class="current-energy" id="currentEnergy">1000</div>
+                    <div class="max-energy">/ <span id="maxEnergy">1000</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main clicker area -->
+        <div class="clicker-area">
+            <div class="star-container">
+                <div class="main-star" id="mainStar">
+                    <div class="star-glow"></div>
+                    ⭐
+                </div>
+                <div class="click-counter" id="clickCounter">+1</div>
+            </div>
+            <div class="stars-per-click">
+                <span id="starsPerClick">1</span> stars per click
+            </div>
+        </div>
+
+        <!-- Upgrades section -->
+        <div class="upgrades-section">
+            <h3>Upgrades</h3>
+            <div class="upgrades-grid">
+                <div class="upgrade-card" id="upgrade1">
+                    <div class="upgrade-icon">🚀</div>
+                    <div class="upgrade-info">
+                        <div class="upgrade-name">Rocket Boost</div>
+                        <div class="upgrade-description">+1 star per click</div>
+                        <div class="upgrade-cost">Cost: <span id="upgrade1Cost">10</span> ⭐</div>
+                    </div>
+                    <div class="upgrade-level">Level <span id="upgrade1Level">0</span></div>
+                </div>
+
+                <div class="upgrade-card" id="upgrade2">
+                    <div class="upgrade-icon">🌟</div>
+                    <div class="upgrade-info">
+                        <div class="upgrade-name">Star Power</div>
+                        <div class="upgrade-description">+2 stars per click</div>
+                        <div class="upgrade-cost">Cost: <span id="upgrade2Cost">50</span> ⭐</div>
+                    </div>
+                    <div class="upgrade-level">Level <span id="upgrade2Level">0</span></div>
+                </div>
+
+                <div class="upgrade-card" id="upgrade3">
+                    <div class="upgrade-icon">💫</div>
+                    <div class="upgrade-info">
+                        <div class="upgrade-name">Cosmic Energy</div>
+                        <div class="upgrade-description">+500 max energy</div>
+                        <div class="upgrade-cost">Cost: <span id="upgrade3Cost">100</span> ⭐</div>
+                    </div>
+                    <div class="upgrade-level">Level <span id="upgrade3Level">0</span></div>
+                </div>
+
+                <div class="upgrade-card" id="upgrade4">
+                    <div class="upgrade-icon">🌌</div>
+                    <div class="upgrade-info">
+                        <div class="upgrade-name">Galaxy Multiplier</div>
+                        <div class="upgrade-description">+5 stars per click</div>
+                        <div class="upgrade-cost">Cost: <span id="upgrade4Cost">500</span> ⭐</div>
+                    </div>
+                    <div class="upgrade-level">Level <span id="upgrade4Level">0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom navigation -->
+        <div class="bottom-nav">
+            <div class="nav-item active">
+                <div class="nav-icon">⭐</div>
+                <div class="nav-text">Game</div>
+            </div>
+            <div class="nav-item">
+                <div class="nav-icon">📊</div>
+                <div class="nav-text">Stats</div>
+            </div>
+            <div class="nav-item">
+                <div class="nav-icon">👥</div>
+                <div class="nav-text">Friends</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating click effects -->
+    <div class="click-effects" id="clickEffects"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
